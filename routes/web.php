@@ -28,4 +28,4 @@ Route::get('/register', function () {
     return view('register');
 });
 Route::post('sign_up', 'AuthModelController@store')->name('signup');
-Route::post('login', 'AuthModelController@stores')->name('login')->middleware('determine_role');    
+Route::post('login')->name('login')->middleware('determine_role');    
